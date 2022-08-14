@@ -1,0 +1,81 @@
+.app-main {
+   background-color: $very-pale-orange;
+   padding: var(--size);
+   border-radius: var(--border-radius);
+
+   .main-header {
+      h1 {
+         font-size: var(--fs-400);
+      }
+   }
+
+   .main-body {
+      --gap: 0.5em;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      gap: var(--gap);
+      padding-block: var(--size);
+
+      .bars {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         gap: var(--gap);
+      }
+
+      .balance {
+         background-color: $dark-brown;
+         color: $very-pale-orange;
+         padding: 0.3em;
+         border-radius: 5px;
+         font-size: 1rem;
+      }
+
+      .bar {
+         background-color: $Soft-red;
+        //  min-height: 8em;
+         min-width: 2.5em;
+         border-radius: 5px;
+         text-align: center;
+
+         &:hover {
+            background-color: $cyan;
+            cursor: pointer;
+         }
+      }
+   }
+
+   //    main footer
+   .main-footer {
+      display: flex;
+      gap: var(--gap);
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: var(--size);
+      border-top: 2px solid $medium-brown;
+
+      .left-col {
+         h1 {
+            font-size: var(--fs-600);
+         }
+         p {
+            color: $medium-brown;
+         }
+      }
+
+      .right-col {
+         p {
+            text-align: right;
+            font-weight: 700;
+
+            span {
+               display: block;
+               color: $medium-brown;
+               font-weight: 400;
+            }
+         }
+      }
+   }
+}

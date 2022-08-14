@@ -1,0 +1,22 @@
+.header {
+   background-color: $Soft-red;
+   border-radius: var(--border-radius);
+   margin-bottom: var(--size);
+
+   .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--size);
+   }
+
+   .details {
+      h1 {
+         font-size: var(--fs-400);
+      }
+
+      h1,p{
+        color: $very-pale-orange;
+      }
+   }
+}

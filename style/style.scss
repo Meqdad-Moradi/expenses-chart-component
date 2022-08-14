@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+@import "colors";
+
+:root {
+   --size: 2em;
+   --gap: 1em;
+   --border-radius: 1em;
+   --fs-400: 2rem;
+   --fs-500: 2.5rem;
+   --fs-600: 3.5rem;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   background-color: transparent;
+   font-family: "DM Sans", sans-serif;
+
+   &::first-letter {
+      text-transform: uppercase;
+   }
+}
+
+body {
+   background-color: $cream;
+   color: $dark-brown;
+   font-size: 1.125rem;
+   font-weight: 400;
+}
+
+img {
+   width: 100%;
+   display: block;
+}
+
+p {
+   line-height: 1.7;
+}
+
+// layouts
+.app {
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.container {
+   width: min(100% - 2em, 650px);
+   margin-inline: auto;
+}
+
+// snippets
+@import "header";
+@import "main";

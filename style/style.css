@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+:root {
+  --size: 2em;
+  --gap: 1em;
+  --border-radius: 1em;
+  --fs-400: 2rem;
+  --fs-500: 2.5rem;
+  --fs-600: 3.5rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: "DM Sans", sans-serif;
+}
+*::first-letter,
+*::after::first-letter,
+*::before::first-letter {
+  text-transform: uppercase;
+}
+
+body {
+  background-color: hsl(27deg, 66%, 92%);
+  color: hsl(25deg, 47%, 15%);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: min(100% - 2em, 650px);
+  margin-inline: auto;
+}
+
+.header {
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--size);
+}
+.header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--size);
+}
+.header .details h1 {
+  font-size: var(--fs-400);
+}
+.header .details h1, .header .details p {
+  color: hsl(33deg, 100%, 98%);
+}
+
+.app-main {
+  background-color: hsl(33deg, 100%, 98%);
+  padding: var(--size);
+  border-radius: var(--border-radius);
+}
+.app-main .main-header h1 {
+  font-size: var(--fs-400);
+}
+.app-main .main-body {
+  --gap: 0.5em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: var(--gap);
+  padding-block: var(--size);
+}
+.app-main .main-body .bars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--gap);
+}
+.app-main .main-body .balance {
+  background-color: hsl(25deg, 47%, 15%);
+  color: hsl(33deg, 100%, 98%);
+  padding: 0.3em;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.app-main .main-body .bar {
+  background-color: hsl(10deg, 79%, 65%);
+  min-width: 2.5em;
+  border-radius: 5px;
+  text-align: center;
+}
+.app-main .main-body .bar:hover {
+  background-color: hsl(186deg, 34%, 60%);
+  cursor: pointer;
+}
+.app-main .main-footer {
+  display: flex;
+  gap: var(--gap);
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: var(--size);
+  border-top: 2px solid hsl(28deg, 10%, 53%);
+}
+.app-main .main-footer .left-col h1 {
+  font-size: var(--fs-600);
+}
+.app-main .main-footer .left-col p {
+  color: hsl(28deg, 10%, 53%);
+}
+.app-main .main-footer .right-col p {
+  text-align: right;
+  font-weight: 700;
+}
+.app-main .main-footer .right-col p span {
+  display: block;
+  color: hsl(28deg, 10%, 53%);
+  font-weight: 400;
+}/*# sourceMappingURL=style.css.map */
