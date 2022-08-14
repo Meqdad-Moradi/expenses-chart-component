@@ -5,12 +5,11 @@
 
    .main-header {
       h1 {
-         font-size: var(--fs-400);
+         font-size: clamp(1.5rem, 2.2vw, var(--fs-400));
       }
    }
 
    .main-body {
-      --gap: 0.5em;
       display: flex;
       align-items: flex-end;
       justify-content: space-around;
@@ -31,19 +30,27 @@
          padding: 0.3em;
          border-radius: 5px;
          font-size: 1rem;
+         opacity: 0;
+         transition: all 0.25s ease;
       }
 
       .bar {
+         --size: 2.5em;
          background-color: $Soft-red;
-        //  min-height: 8em;
-         min-width: 2.5em;
+         width: var(--size);
+         max-width: var(--size);
          border-radius: 5px;
          text-align: center;
+         transition: all 0.3s ease;
 
          &:hover {
-            background-color: $cyan;
             cursor: pointer;
+            opacity: 0.7;
          }
+      }
+
+      .day {
+         color: $medium-brown;
       }
    }
 
@@ -58,7 +65,7 @@
 
       .left-col {
          h1 {
-            font-size: var(--fs-600);
+            font-size: clamp(2rem, 3vw, var(--fs-600));
          }
          p {
             color: $medium-brown;
@@ -75,6 +82,23 @@
                color: $medium-brown;
                font-weight: 400;
             }
+         }
+      }
+   }
+}
+
+@media (max-width: 50em) {
+   .app-main {
+      --size: 1em;
+      .main-body {
+         gap: 0;
+         justify-content: center;
+         .balance {
+            font-size: .8rem;
+         }
+
+         .bar {
+            width: 1.7em;
          }
       }
    }
